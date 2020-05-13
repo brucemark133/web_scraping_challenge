@@ -8,7 +8,7 @@ import time
 
 def init_browser():
     # @NOTE: Replace the path with your actual path to the chromedriver
-    executable_path = {"executable_path": "chromedriver.exe"}
+    executable_path = {'executable_path' : '/Users/bruce/OneDrive/Documents/GitHub/web_scraping_challenge/mission_to_mars/chromedriver'}
     return Browser("chrome", **executable_path, headless=False)
 
 
