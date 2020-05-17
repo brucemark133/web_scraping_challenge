@@ -23,7 +23,7 @@ def scrapeA():
     print(title1)
     par1 = soup.find('div', class_='rollover_description_inner').text
     browser.quit()
-    return par1
+    return title1, par1
 
 
 def scrapeB():
@@ -106,11 +106,13 @@ def scrapeE():
     return hemi_url_list
 
 def All():
-    marsdata ={"News Title": scrapeA(),
+    news_title,news_para=scrapeA()
+    marsdata ={"News_Title": news_title,
+    "News_Paragraph": news_para,
             "Images": scrapeB(),
             "Twitter": scrapeC(),
             "Table": scrapeD(),
-            "Lrg Image": scrapeE()}
+            "Lrg_Image": scrapeE()}
     return print(marsdata)
 
 if __name__ == '__main__':
